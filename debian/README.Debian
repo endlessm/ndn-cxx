@@ -1,0 +1,11 @@
+libndn for Debian
+----------------
+
+We package this as having soname 0, that said libndn is changing fast, and
+it's dependencies use it's full version a.b.c as a soname for that. this
+makes it impractical for debian packaging as it requires to make a lot of
+new binary packages… (and that there is no easy way to generate them), so we
+force a soname of 0 and require a source version hard dependency on the
+other packages, this is not ideal but it looks like the best we can do now.
+
+ -- Niv Sardi <xaiki@evilgiggle.com>, Wed, 21 Dec 2016 11:17:00 -0300
