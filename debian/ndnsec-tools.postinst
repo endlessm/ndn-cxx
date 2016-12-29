@@ -9,7 +9,7 @@ fi
 # support EOS
 if [ -f /etc/lsb-release]; then
   . /etc/lsb-release
-  [ "x${DISTRIB_ID}" == "xEndless" ] && mv /etc/ndn /usr/ndn/etc && ln -sf /usr/ndn/etc /etc/ndn
+  [ "x${DISTRIB_ID}" = "xEndless" ] && mv /etc/ndn /usr/ndn/etc && ln -sf /usr/ndn/etc /etc/ndn
 fi
 
 #DEBHELPER#
