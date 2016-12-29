@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+if ! ndnsec-get-default >/dev/null
+then # generate keys for this machine
+  ndnsec-keygen /localhost/operator | ndnsec-install-cert -
+fi
+
+# support EOS
+if [ -f /etc/lsb-release ]; then
+  . /etc/lsb-release
+  if [ "x${DISTRIB_ID}" = "xEndless" ]; then
+    if [ ! -e /usr/share/ndn/etc ]; then
+      mkdir -p /usr/share/ndn
+      mv /etc/ndn /usr/share/ndn/etc && ln -sf /usr/share/ndn/etc /etc/ndn
+    fi
+  fi
+fi
+
+#DEBHELPER#
+
+exit 0

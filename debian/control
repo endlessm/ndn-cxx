@@ -1,6 +1,6 @@
 Source: libndn-cxx
 Priority: optional
-Maintainer: Niv Sardi <xaiki@endlessm.com>
+Maintainer: Endless Maintainers <maintainers@endlessm.com>
 Build-Depends: debhelper (>= 9),
                dh-waf,
                libboost-chrono-dev,
@@ -21,7 +21,7 @@ Homepage: https://named-data.net
 Vcs-Git: https://github.com/endlessm/ndn-cxx
 Vcs-Browser: https://github.com/endlessm/ndn-cxx/tree/master
 
-Package: libndn-cxx0
+Package: libndn-cxx0.5.0
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: C++ library implementing Named Data Networking (NDN) primitives
@@ -38,7 +38,7 @@ Description: C++ library implementing Named Data Networking (NDN) primitives
 Package: libndn-cxx-dev
 Section: libdevel
 Architecture: any
-Depends: libndn-cxx0 (= ${binary:Version}), ${misc:Depends}
+Depends: libndn-cxx0.5.0 (= ${binary:Version}), ${misc:Depends}
 Description: Dev files for C++ library implementing Named Data Networking (NDN) primitives
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
@@ -55,7 +55,7 @@ Description: Dev files for C++ library implementing Named Data Networking (NDN) 
 Package: ndnsec-tools
 Section: utils
 Architecture: any
-Depends: libndn-cxx0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libndn-cxx0.5.0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: basic tools for Named Data Networking (NDN) operations
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
