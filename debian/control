@@ -1,6 +1,6 @@
 Source: libndn-cxx
 Priority: optional
-Maintainer: Niv Sardi <xaiki@endlessm.com>
+Maintainer: Endless Maintainers <maintainers@endlessm.com>
 Build-Depends: debhelper (>= 9),
                dh-waf,
                libboost-chrono-dev,
