@@ -10,8 +10,9 @@ fi
 if [ -f /etc/lsb-release ]; then
   . /etc/lsb-release
   if [ "x${DISTRIB_ID}" = "xEndless" ]; then
-    if [ ! -e /usr/ndn/etc ]; then
-      mv /etc/ndn /usr/ndn/etc && ln -sf /usr/ndn/etc /etc/ndn
+    if [ ! -e /usr/share/ndn/etc ]; then
+      mkdir -p /usr/share/ndn
+      mv /etc/ndn /usr/share/ndn/etc && ln -sf /usr/share/ndn/etc /etc/ndn
     fi
   fi
 fi
