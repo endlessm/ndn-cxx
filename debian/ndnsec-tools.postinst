@@ -7,12 +7,13 @@ then # generate keys for this machine
 fi
 
 # support EOS
-if [ -f /etc/lsb-release]; then
+if [ -f /etc/lsb-release ]; then
   . /etc/lsb-release
-  [ "x${DISTRIB_ID}" = "xEndless" ] && mv /etc/ndn /usr/ndn/etc && ln -sf /usr/ndn/etc /etc/ndn
+  if [ "x${DISTRIB_ID}" = "xEndless" ]; then
+    mv /etc/ndn /usr/ndn/etc && ln -sf /usr/ndn/etc /etc/ndn
+  fi
 fi
 
 #DEBHELPER#
-
 
 exit 0
