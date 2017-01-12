@@ -1,0 +1,4 @@
+# Maintaining a symbols file for libndn-cxx is too hard, and it will change
+# regularly as they do not yet guarantee ABI stability, so stick to an shlibs
+# file.
+libndn-cxx 0.5.0 (>= 0.5.0)
