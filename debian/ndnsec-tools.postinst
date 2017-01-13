@@ -11,6 +11,11 @@ if [ "$1" = configure ]; then
       --group \
       ndn-user
 
+  # on Endless the user is created by base-passwd, but for some reason the
+  # home directory isn't, so we make sure it's actually there.
+  mkdir -p /var/lib/ndn
+  chown ndn-user.ndn-user /var/lib/ndn
+
   su -s /bin/sh ndn-user -c '
   # workaround a bug in libboost that will fail if LC_ALL or LANG are
   # uncorrectly set: https://svn.boost.org/trac/boost/ticket/4688
