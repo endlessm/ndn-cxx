@@ -11,9 +11,9 @@ if [ "$1" = configure ]; then
       --group \
       ndn-user
 
-  if ! ndnsec-get-default >/dev/null
+  if ! su -s /bin/sh ndn-user -c ndnsec-get-default >/dev/null
   then # generate keys for this machine
-    ndnsec-keygen /localhost/operator | ndnsec-install-cert -
+    su -s /bin/sh ndn-user -c 'ndnsec-keygen /localhost/operator | ndnsec-install-cert -'
   fi
 
   # support EOS
