@@ -1,3 +1,13 @@
+libndn-cxx (0.5.1-0) unstable; urgency=medium
+
+  * New Upstream Release
+    - drop 20_endless-fix-typos-and-manpages patch, integrated upstream
+    - rename binary package to libndn-cxx0.5.1
+    - add missing dependency on adduser
+    - call chown with ':' syntax
+
+ -- Niv Sardi <xaiki@debian.org>  Thu, 26 Jan 2017 10:29:06 -0300
+
 libndn-cxx (0.5.0-0) unstable; urgency=medium
 
   * Initial release
