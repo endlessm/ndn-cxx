@@ -1,8 +1,7 @@
 Source: libndn-cxx
 Priority: optional
 Maintainer: Endless Maintainers <maintainers@endlessm.com>
-Build-Depends: adduser,
-               debhelper (>= 9),
+Build-Depends: debhelper (>= 9),
                dh-waf,
                libboost-chrono-dev,
                libboost-dev,
@@ -56,7 +55,8 @@ Description: C++ library implementing Named Data Networking (NDN) primitives
 Package: ndnsec-tools
 Section: utils
 Architecture: any
-Depends: libndn-cxx0.5.1 (= ${binary:Version}),
+Depends: adduser,
+         libndn-cxx0.5.1 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: basic tools for Named Data Networking (NDN) operations
